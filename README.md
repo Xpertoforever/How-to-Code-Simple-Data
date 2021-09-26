@@ -1,2 +1,2 @@
-# How-to-Code-Simple-Data
-Edx - How to Code Simple Data
+# UBCx: HtC1x How to Code: Simple Data
+
