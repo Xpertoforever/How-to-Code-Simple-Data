@@ -27,7 +27,7 @@ The #i means that this number is pretty close, but not exactly
 
 # String and Images 
 
-## String Part 1  
+## Part 1 : String   
 To form a String -> Put a expression between double quote  
 "String"  
 "apple"  
