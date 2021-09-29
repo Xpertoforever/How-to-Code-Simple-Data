@@ -106,5 +106,13 @@ i.g.
        (circle 10 "solid" "red")  
        (circle 20 "solid" "blue"))  
        
+# Constant Definitions  
+To give value and set variables we use **define**
+(define NAME EXPRESSION)  
+i.g.
+(define WIDTH 400)  
+(define HEIGHT 600)  
+
+
        
        
