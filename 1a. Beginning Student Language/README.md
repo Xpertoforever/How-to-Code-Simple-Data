@@ -21,9 +21,7 @@ A primitive is a basic building block provided by BSL that we use when we design
 
 ## Expression Part 2
 **Irracional number**
-
 (sqrt 2)
-
 The answer #i1.414213....
 
 The #i means that this number is pretty close, but not exactly
