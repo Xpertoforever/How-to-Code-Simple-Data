@@ -134,6 +134,10 @@ i.g.
         (circle 40 "solid" "yellow")  
         (circle 40 "solid" "green"))  
 
+**How to form a function definition**  
+(define ( Function_name Parameter(s) )  
+        (Expression))    
+
 **defining the function**  
 (define (bulb c)  
   (circle 40 "solid" c))  
