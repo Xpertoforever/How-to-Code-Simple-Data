@@ -90,14 +90,21 @@ i.g.
 - (text "Sample" 30 "blue")
 - (text "SAMPLE" 50 "purple")
 
-**above**  
-This is a function that allows us to put one image **above** to others  
+**above / beside / overlay**  
+This is a function that allows us to put the provide images in order according to what we use **above** **beside** **overlay**  
 (above (Image top position) (Image down position) .... )  
 i.g.  
 (above (rectangle 10 10 "solid" "blue")  
        (rectangle 10 10 "solid" "black")  
        (rectangle 10 10 "solid" "red"))  
        
-(above (circle 10 "solid" "black")  
+(beside (circle 10 "solid" "black")  
        (circle 10 "solid" "red")  
-       (circle 10 "solid" "blue"))  
+       (circle 10 "solid" "blue")) 
+
+(overlay (circle 5 "solid" "black")  
+       (circle 10 "solid" "red")  
+       (circle 20 "solid" "blue"))  
+       
+       
+       
