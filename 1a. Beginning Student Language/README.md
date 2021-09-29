@@ -70,5 +70,11 @@ i.g. (for example)
 - (circle 50 "solid" "black")
 - (circle 30 "outline" "purple")
 
+**Use variable**
+To give value and set variables we use **define**
+i.g.
+- (define x 123) -> x is 123 (number)  
+- (define y "red") -> y is "red" (string)  
+
 **rectangle**  
 
