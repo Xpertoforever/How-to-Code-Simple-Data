@@ -1,0 +1,7 @@
+;Solution of the previous Problem
+;(sqrt (+ (sqr 3) (sqr 4)))
+
+;Irracional number
+(sqrt 2)
+; The answer #i1.414213....
+; The #i means that this number is pretty close, but not exactly
