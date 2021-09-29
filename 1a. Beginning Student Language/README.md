@@ -62,6 +62,13 @@ We need to add in the top position
 **(require 2htdp/image)**  
 It tells to DrRacket We want to use the image functions from the 2nd edition of the how to design programs book  
 
+**circle**  
+(circle radius "atribute1" "colour")  
+i.g. (for example)  
+- (circle 10 "solid" "red")
+- (circle 20 "solid" "green")
+- (circle 50 "solid" "black")
+- (circle 30 "outline" "purple")
 
 
 
