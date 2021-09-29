@@ -34,7 +34,7 @@ To form a String -> Put a expression between double quote
 "Ada"  
 
 **string-append**  
-string-appen put one or more strings one after the other in a single string
+string-appen put one or more strings one after the other in a single string  
 (string-append "Ada" "Lovelace")  
 -> "AdaLovelace"  
 (string-append "Ada" " " "Lovelace")  
