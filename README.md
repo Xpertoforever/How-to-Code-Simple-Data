@@ -1,18 +1,9 @@
-# UBCx: HtC1x How to Code: Simple Data
-With DrRacket 8.0
+# UBCx: HtC1x How to Code: Simple Data  
+With DrRacket 8.0  
 
-## 1a: Beginning Student Language
+# General Index  
 
-### Expressions
-
-Necesary to choose Beginner Student Language
-To form an expression:
-
-(<primitive> <expression> ...)
-  
-Code on Dr Racket:
-
-(+ 3 4)
-
+## 1a: Beginning Student Language  
+### Expressions  
 
 
