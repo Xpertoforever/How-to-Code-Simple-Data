@@ -70,5 +70,5 @@ i.g. (for example)
 - (circle 50 "solid" "black")
 - (circle 30 "outline" "purple")
 
-
+**rectangle**  
 
