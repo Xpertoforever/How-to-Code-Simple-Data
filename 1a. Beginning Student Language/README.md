@@ -35,17 +35,21 @@ To form a String -> Put a expression between double quote
 
 **string-append**  
 string-appen put one or more strings one after the other in a single string
-(string-append "Ada" "Lovelace") -> "AdaLovelace"  
-(string-append "Ada" " " "Lovelace") -> "Ada Lovelace"  
+(string-append "Ada" "Lovelace")  
+-> "AdaLovelace"  
+(string-append "Ada" " " "Lovelace")  
+-> "Ada Lovelace"  
 
 >**Observation**  
 > 123 -> this is a number  
 > "123" -> this is a string  
 
 **string-lenght**  
+Returns the number of characters in the string, the same as saying the length  
+(string-length "123456")  
+-> 6
+
 0 - based index  
-
-
 ## Part 2/2 : Images
 
 
