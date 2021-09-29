@@ -28,12 +28,12 @@ The #i means that this number is pretty close, but not exactly
 # String and Images 
 
 ## Part 1/2 : String   
-➡️ To form a String -> Put a expression between double quote  
+⏩ To form a String -> Put a expression between double quote  
 "String"  
 "apple"  
 "Ada"  
 
-▶️**string-append**  
+⏩ **string-append**  
 string-appen put one or more strings one after the other in a single string  
 (string-append "Ada" "Lovelace")  
 -> "AdaLovelace"  
