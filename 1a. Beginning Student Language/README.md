@@ -38,7 +38,7 @@ string-appen put one or more strings one after the other in a single string
 (string-append "Ada" "Lovelace") -> "AdaLovelace"  
 (string-append "Ada" " " "Lovelace") -> "Ada Lovelace"  
 
->Observation  
+>**Observation**  
 > 123 -> this is a number  
 > "123" -> this is a string  
 
