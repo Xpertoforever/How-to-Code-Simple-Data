@@ -57,8 +57,11 @@ Form a new string from the string provides between intervals
 -> "235"  
 (The same than consider [2 5> We include the first limit but not the second)
 
+## Part 2/2 : Images  
+We need to add in the top position  
+(required 2htdp/image)  
+It tells to DrRacket We want to use the image functions from the 2nd edition of the how to design programs book  
 
-## Part 2/2 : Images
 
 
 
