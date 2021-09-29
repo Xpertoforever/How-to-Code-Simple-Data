@@ -127,6 +127,20 @@ i.g.
 (define RCAT (rotate -10 LEGO))  
 (define LCAT (rotate 10 LEGO))  
 
+# Function Definitions  
+By using functions We can manage our code properly
+i.g.
+( above (circle 40 "solid" "red")  
+        (circle 40 "solid" "yellow")  
+        (circle 40 "solid" "green"))  
 
+**defining the function**  
+(define (bulb c)  
+  (circle 40 "solid" c))  
+**applying the function**  
+(above (bulb "red")  
+       (bulb "yellow")  
+       (bulb "green"))  
+        
        
        
