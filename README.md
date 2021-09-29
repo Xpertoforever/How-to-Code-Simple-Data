@@ -4,10 +4,10 @@ With DrRacket 8.0
 # General Index  
 
 ## 1a: Beginning Student Language  
-### - Expressions  
-### - Strings and Images  
-### - Constant Definitions  
-### - Function Definitions  
-### - Booleans and if Expressions
+- Expressions  
+- Strings and Images  
+- Constant Definitions  
+- Function Definitions  
+- Booleans and if Expressions
 
 
