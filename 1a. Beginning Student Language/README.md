@@ -53,7 +53,8 @@ Returns the number of characters in the string, the same as saying the length
 Form a new string from the string provides between intervals
 0 - based index, we count the first like 0 position  
 (substring "012345678" 2 5)
--> "235" (The same than consider [2 5> We include the first limit but not the second)
+-> "235"  
+(The same than consider [2 5> We include the first limit but not the second)
 
 
 ## Part 2/2 : Images
