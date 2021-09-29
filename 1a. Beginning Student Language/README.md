@@ -82,3 +82,11 @@ i.g.
 - (rectangle 30 60 "outline" "black")
 - (rectangle 60 20 "solid" "yellow")
 - (rectangle 40 40 "solid" "blue")
+
+**text**
+Convert a text into a image  
+(text "Text you want to use" size "colour")  
+i.g.  
+- (text "Sample" 30 "blue")
+- (text "SAMPLE" 50 "purple")
+
