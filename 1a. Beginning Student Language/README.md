@@ -28,12 +28,13 @@ The #i means that this number is pretty close, but not exactly
 # String and Images 
 
 ## Part 1/2 : String   
-#️⃣ To form a String -> Put a expression between double quote  
+**To form a String**  
+-> Put a expression between double quote  
 "String"  
 "apple"  
 "Ada"  
 
-⏩ **string-append**  
+**string-append**  
 string-appen put one or more strings one after the other in a single string  
 (string-append "Ada" "Lovelace")  
 -> "AdaLovelace"  
@@ -44,12 +45,12 @@ string-appen put one or more strings one after the other in a single string
 > 123 -> this is a number  
 > "123" -> this is a string  
 
-▶️**string-lenght**  
+**string-lenght**  
 Returns the number of characters in the string, the same as saying the length  
 (string-length "123456")  
 -> 6  
 
-▶️**substring**    
+**substring**    
 Form a new string from the string provides between intervals
 0 - based index, we count the first like 0 position  
 (substring "012345678" 2 5)
