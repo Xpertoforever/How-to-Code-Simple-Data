@@ -25,9 +25,9 @@ A primitive is a basic building block provided by BSL that we use when we design
 The answer #i1.414213....  
 The #i means that this number is pretty close, but not exactly
 
-## String and Images Part 1
+# String and Images 
 
-### String  
+## String Part 1  
 To form a String -> Put a expression between double quote  
 "String"  
 "apple"  
