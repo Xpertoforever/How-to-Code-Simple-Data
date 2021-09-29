@@ -1,5 +1,5 @@
 # Expression
-## Expression Part 1
+## Expression Part 1/2
 ### To form an expression
 The starter file for this video is pythag-starter.rkt
 * < Value >
@@ -19,7 +19,7 @@ A value is a data element, such as 1, "foo", (make-cat 10 20) etc.
 **Primitive**
 A primitive is a basic building block provided by BSL that we use when we design our programs. BSL provides primitive data and primitive operations on data.
 
-## Expression Part 2
+## Expression Part 2/2
 **Irracional number**  
 (sqrt 2)  
 The answer #i1.414213....  
@@ -27,7 +27,7 @@ The #i means that this number is pretty close, but not exactly
 
 # String and Images 
 
-## Part 1 : String   
+## Part 1/2 : String   
 To form a String -> Put a expression between double quote  
 "String"  
 "apple"  
