@@ -95,7 +95,7 @@ This is a function that allows us to put one image **above** to others
 (above (Image top position) (Image down position) .... )  
 i.g.  
 (above (rectangle 10 10 "solid" "blue")  
-       (rectangle 10 10 "solid" "black")  
+         (rectangle 10 10 "solid" "black")  
        (rectangle 10 10 "solid" "red"))  
        
 (above (circle 10 "solid" "black")  
