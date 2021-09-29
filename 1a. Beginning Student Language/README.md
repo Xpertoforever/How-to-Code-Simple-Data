@@ -33,6 +33,11 @@ To form a String -> Put a expression between double quote
 "apple"  
 "Ada"  
 
+**string-append**  
+string-appen put one or more strings one after the other in a single string
+
+
+
 
 ## Part 2/2 : Images
 
