@@ -119,7 +119,7 @@ i.g.
 **define Images**  
 When you copy and paste an image into github, Github convert the image in "."
 
-(define LEGO . )  
+(define LEGO . ) ;this point beside LEGO is an image that could not be copy into Github.
 
 **rotate the Images**  
 (rotate degree Image or The Constant Definition)  
