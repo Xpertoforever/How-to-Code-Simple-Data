@@ -42,6 +42,8 @@ string-appen put one or more strings one after the other in a single string
 > 123 -> this is a number  
 > "123" -> this is a string  
 
+**string-lenght**  
+0 - based index  
 
 
 ## Part 2/2 : Images
