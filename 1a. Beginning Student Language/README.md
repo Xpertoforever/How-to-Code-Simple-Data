@@ -7,10 +7,8 @@ The starter file for this video is pythag-starter.rkt
 
 ### Vocabulary
 **Source:**
-
 Course glossary
-
-https://courses.edx.org/courses/course-v1:UBCx+HtC1x+2T2017/d192723b104b4c8093aa0c0fc117e97f/
+> https://courses.edx.org/courses/course-v1:UBCx+HtC1x+2T2017/d192723b104b4c8093aa0c0fc117e97f/
 
 **Operator**
 Primitive operators are provided by the BSL language to operate on primitive data. They include  +, -, string-append, substring, image-width and many others.
