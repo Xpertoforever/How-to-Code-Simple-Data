@@ -1,6 +1,6 @@
 # Expression 
 ## To form an expression
-;<Value>
-;<primitive> <expression> ...
+* <Value>
+* <primitive> <expression> ...
 
   
