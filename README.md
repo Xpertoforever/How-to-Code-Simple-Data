@@ -6,7 +6,10 @@
 ### Expressions
 
 Necesary to choose Beginner Student Language
+To form an expression:
 
+(<primitive> <expression> ...)
+  
 Code on Dr Racket:
 
 (+ 3 4)
