@@ -107,8 +107,6 @@ i.g.
        (circle 20 "solid" "blue"))  
        
 # Constant Definitions 
-
-## Constant Definitions Part 1/2
 To give value and set variables we use **define**  
 (define NAME EXPRESSION)  
 i.g.
@@ -128,8 +126,6 @@ i.g.
 (rotate 10 LEGO)  
 (define RCAT (rotate -10 LEGO))  
 (define LCAT (rotate 10 LEGO))  
-
-## Constant Definitions Part 2/2
 
 
        
