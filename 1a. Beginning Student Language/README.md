@@ -106,12 +106,30 @@ i.g.
        (circle 10 "solid" "red")  
        (circle 20 "solid" "blue"))  
        
-# Constant Definitions  
-To give value and set variables we use **define**
+# Constant Definitions 
+
+## Constant Definitions Part 1/2
+To give value and set variables we use **define**  
 (define NAME EXPRESSION)  
 i.g.
 (define WIDTH 400)  
 (define HEIGHT 600)  
+*IMPORTANT* (define ...) does not return any value just define  
+
+**define Images**  
+When you copy and paste an image into github, Github convert the image in "."
+
+(define LEGO . )  
+
+**rotate the Images**  
+(rotate degree Image or The Constant Definition)  
+i.g.  
+(rotate -10 LEGO)  
+(rotate 10 LEGO)  
+(define RCAT (rotate -10 LEGO))  
+(define LCAT (rotate 10 LEGO))  
+
+## Constant Definitions Part 2/2
 
 
        
