@@ -77,4 +77,8 @@ i.g.
 - (define y "red") -> y is "red" (string)  
 
 **rectangle**  
-
+(rectangle witdh heigh "atribute" "colour")  
+i.g.  
+- (rectangle 30 60 "outline" "black")
+- (rectangle 60 20 "solid" "yellow")
+- (rectangle 40 40 "solid" "blue")
