@@ -212,8 +212,12 @@ How to evaluate if expressions, the sequence to get the result
 In the folder you will find the file .rkt 
 
 ## Booleans  and if Expressions Part 4/4  
-
-
+We will see how to produce others expressions:
+**and**
+```racket
+(and <exp1> <exp2> <exp3> ... )
+;all <expn> must produce boolean
+```
 
 
 
