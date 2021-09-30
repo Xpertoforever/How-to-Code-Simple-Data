@@ -188,13 +188,14 @@ i.g.
 
 (< (image-width I1)  
    (image-width I2))  
-
+```
 ## Booleans  and if Expressions Part 2/4  
 To form an If expression: 
 ```racket
 (if   <expression>  question. must produce booleans  
       <expression>  True answer  
-      <expression>)  False answer  
+      <expression>)  False answer 
+```
              
 
              
