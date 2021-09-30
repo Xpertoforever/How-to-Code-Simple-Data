@@ -227,6 +227,10 @@ Also there is another expression "or" "not"
 (and (> (image-height I1) (image-height I2))
      (< (image-width I1) (image-width I2)))
 ```
+# Using the Stepper
+How to use the Stepper located in the top right corner, to see each step that our code pass  
+
+
 
 
 
