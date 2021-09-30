@@ -196,8 +196,17 @@ To form an If expression:
       <expression>  True answer  
       <expression>)  False answer 
 ```
-             
+i.g. We compare atributes from 2 rectagles
+```racket
+(require 2htdp/image)
+(define I1 (rectangle 10 20 "solid" "red"))
+(define I2 (rectangle 20 10 "solid" "blue"))
 
+(if (< (image-width I2)
+       (image-height I1))
+    "tall"
+    "wide")             
+```
              
 
 
