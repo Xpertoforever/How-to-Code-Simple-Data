@@ -182,6 +182,7 @@ i.g.
 **We can also compare atributes from images**  
 with image-width  
 i.g.  
+```racket
 (define I1 (rectangle 10 20 "solid" "red"))  
 (define I2 (rectangle 20 10 "solid" "blue"))  
 
@@ -190,7 +191,7 @@ i.g.
 
 ## Booleans  and if Expressions Part 2/4  
 To form an If expression: 
-```
+```racket
 (if   <expression>  question. must produce booleans  
       <expression>  True answer  
       <expression>)  False answer  
