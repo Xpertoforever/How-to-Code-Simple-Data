@@ -148,7 +148,8 @@ i.g.
         
 # Booleans  and if Expressions
 
-## Booleans  and if Expressions Part 1/4  
+## Booleans  and if Expressions Part 1/4
+In this first part we will see how to get booleans by comparing
 -> Observation:  
 -> Remind to consider the follow line in the beginning of your code to work with images:  
 -> (require 2htdp/image)  
@@ -187,10 +188,13 @@ i.g.
 (< (image-width I1)  
    (image-width I2))  
 
-
-
-
-
+## Booleans  and if Expressions Part 2/4  
+To form an If expression:  
+(if   <expression>  question. must produce booleans  
+      <expression>  True answer  
+      <expression>)  False answer  
+             
+        
 
 
 
