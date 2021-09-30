@@ -238,7 +238,8 @@ Also there is another expression "or" "not"
 How to use the Stepper located in the top right corner, to see each step that our code pass  
 
 # Discovery primitives
-
+To discover primitives, we can right clic in some Racket primitives already used in our code  
+We will open the Racket documentation -> Search Manual
 
 
 
