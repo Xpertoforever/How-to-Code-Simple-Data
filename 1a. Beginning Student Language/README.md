@@ -218,10 +218,15 @@ We will see how to produce others expressions:
 (and <exp1> <exp2> <exp3> ... )
 ;all <expn> must produce boolean
 ```
-Also there is another expression "or"
+Also there is another expression "or" "not"
+```racket
+(require 2htdp/image)
+(define I1 (rectangle 10 20 "solid" "red"))
+(define I2 (rectangle 20 10 "solid" "blue"))
 
-
-
+(and (> (image-height I1) (image-height I2))
+     (< (image-width I1) (image-width I2)))
+```
 
 
 
