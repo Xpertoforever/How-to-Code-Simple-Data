@@ -150,10 +150,12 @@ i.g.
 
 ## Booleans  and if Expressions Part 1/4  
 -> Observation:  
--> Remind to consider the follow line in your code to work with images:  
+-> Remind to consider the follow line in the beginning of your code to work with images:  
 -> (require 2htdp/image)  
 
-
+There are two boolean values:  
+- true
+- false
 
 
 
