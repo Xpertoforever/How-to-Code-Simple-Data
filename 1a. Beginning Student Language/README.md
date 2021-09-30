@@ -146,5 +146,26 @@ i.g.
        (bulb "yellow")  
        (bulb "green"))  
         
+# Booleans  and if Expressions
+
+## Booleans  and if Expressions Part 1/4  
+-> Observation:  
+-> Remind to consider the follow line in your code to work with images:  
+-> (require 2htdp/image)  
+
+
+
+
+
+
+
+
+
        
-       
+
+
+
+
+
+
+
