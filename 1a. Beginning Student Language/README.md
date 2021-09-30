@@ -167,6 +167,44 @@ and now We compare to get a value true or false:
 (>= WIDTH HEIGHT)  
 
 > Predicates are primitives or functions that produce a boolean value (true or false)  
+(= 1 2)  
+(= 1 1)  
+(> 3 9)  
+
+**Comparing String values**  
+(string=? "string1" "string2")  
+i.g.  
+> i.e. means "that is ..."  
+(string=? "foo" "bar")  
+(string=? "abc" "abc")  
+
+**We can also compare atributes from images**  
+with image-width  
+i.g.  
+(define I1 (rectangle 10 20 "solid" "red"))  
+(define I2 (rectangle 20 10 "solid" "blue"))  
+
+(< (image-width I1)  
+   (image-width I2))  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
