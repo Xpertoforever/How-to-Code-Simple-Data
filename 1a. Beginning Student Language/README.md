@@ -218,7 +218,7 @@ We will see how to produce others expressions:
 (and <exp1> <exp2> <exp3> ... )
 ;all <expn> must produce boolean
 ```
-
+Also there is another expression "or"
 
 
 
