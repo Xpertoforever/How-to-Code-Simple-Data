@@ -94,6 +94,7 @@ i.g.
 This is a function that allows us to put the provide images in order according to what we use **above** **beside** **overlay**  
 (above (Image top position) (Image down position) .... )  
 i.g.  
+```racket
 (above (rectangle 10 10 "solid" "blue")  
        (rectangle 10 10 "solid" "black")  
        (rectangle 10 10 "solid" "red"))  
@@ -105,7 +106,7 @@ i.g.
 (overlay (circle 5 "solid" "black")  
        (circle 10 "solid" "red")  
        (circle 20 "solid" "blue"))  
-       
+```       
 # Constant Definitions 
 To give value and set variables we use **define**  
 (define NAME EXPRESSION)  
@@ -130,20 +131,23 @@ i.g.
 # Function Definitions  
 By using functions We can manage our code properly
 i.g.
+```racket
 ( above (circle 40 "solid" "red")  
         (circle 40 "solid" "yellow")  
         (circle 40 "solid" "green"))  
-
+```
 **How to form a function definition**  
+```racket
 (define ( Function_name Parameter(s) )  
         (Expression))    
-
+```
 **defining the function**  
 ```racket
 (define (bulb c)  
   (circle 40 "solid" c))  
+```
 **applying the function**  
-
+```racket
 (above (bulb "red")  
        (bulb "yellow")  
        (bulb "green"))  
