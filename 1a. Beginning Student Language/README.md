@@ -157,6 +157,17 @@ There are two boolean values:
 - true
 - false
 
+i.g. (which means "for example")  
+We define two constants :  
+(define WIDTH 100)  
+(define HEIGHT 100)  
+
+and now We compare to get a value true or false:  
+(> WIDTH HEIGHT)  
+(>= WIDTH HEIGHT)  
+
+> Predicates are primitives or functions that produce a boolean value (true or false)  
+
 
 
 
