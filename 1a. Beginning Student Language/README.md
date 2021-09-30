@@ -207,7 +207,21 @@ i.g. We compare atributes from 2 rectagles
     "tall"
     "wide")             
 ```
-             
+## Booleans  and if Expressions Part 3/4  
+How to evaluate if expressions, the sequence to get the result
+In the folder you will find the file .rkt 
+
+## Booleans  and if Expressions Part 4/4  
+
+```
+(if (< (image-width .)
+       (image-height I2))
+    (image-width I2)
+    (image-height I2))
+
+```
+
+
 
 
 
