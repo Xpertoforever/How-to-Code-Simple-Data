@@ -13,6 +13,8 @@ With DrRacket 8.0
 - Discovery primitives
 - Recommended Problems
 
-
-
-
+## 1b: How to Design Functions
+- Full Speed HtDF Recipe
+- A Simple Practice Example
+- When Tests are Incorrect
+- Poorly Formed Problems
