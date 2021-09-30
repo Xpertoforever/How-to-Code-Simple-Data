@@ -213,13 +213,7 @@ In the folder you will find the file .rkt
 
 ## Booleans  and if Expressions Part 4/4  
 
-```
-(if (< (image-width .)
-       (image-height I2))
-    (image-width I2)
-    (image-height I2))
 
-```
 
 
 
