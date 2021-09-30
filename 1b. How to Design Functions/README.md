@@ -8,7 +8,18 @@ How To Design Functions (HtDF)
 4. Code the function body.
 5. Test and debug until correct
 
-i.g.
+**How To Design Functions (HtDF) SHORT RECIPE**  
+Recipe HtDF  
+1. Signature
+2. Purpose
+3. Stub
+4. Examples
+5. Template
+6. Body
+7. Test  
+
+**Example 1**  
+
 ```racket
 ;; Number -> Number                  ;Signature
 ;; produce 2 times the given number  ;Purpose
@@ -22,4 +33,24 @@ i.g.
 
 (define (double n)                   ;Body
         (* 2 n))
+```
+
+**Example 2 - Yell**  
+DESIGN a function called yell that consumes strings like "hello" and adds "!" to produce strings like "hello!". Remember, when we say DESIGN, we mean follow the recipe. 
+Leave behind commented out versions of the stub and template.  
+```racket
+;; String -> String  ;Signature
+;; add "!" in the end of the given string ;Purpose
+(check-expect (yell "Hello") "Hello!")  ;Examples
+(check-expect (yell "abd") "abd!")
+
+;(define (yell str) "")  ;Stub
+
+;(define (yell str)  ;Template
+;        (... str))
+
+(define (yell str)  ;Code Body
+        (string-append str "!"))
+
+(yell "Wow")
 ```
