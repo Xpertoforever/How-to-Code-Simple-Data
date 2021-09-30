@@ -139,13 +139,15 @@ i.g.
         (Expression))    
 
 **defining the function**  
+```racket
 (define (bulb c)  
   (circle 40 "solid" c))  
 **applying the function**  
+
 (above (bulb "red")  
        (bulb "yellow")  
        (bulb "green"))  
-        
+```    
 # Booleans  and if Expressions
 
 ## Booleans  and if Expressions Part 1/4
@@ -173,12 +175,13 @@ and now We compare to get a value true or false:
 (> 3 9)  
 
 **Comparing String values**  
+```racket
 (string=? "string1" "string2")  
 i.g.  
 > i.e. means "that is ..."  
 (string=? "foo" "bar")  
 (string=? "abc" "abc")  
-
+```
 **We can also compare atributes from images**  
 with image-width  
 i.g.  
