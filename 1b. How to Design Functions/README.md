@@ -54,3 +54,23 @@ Leave behind commented out versions of the stub and template.
 
 (yell "Wow")
 ```
+**Example 3 - Area**  
+PROBLEM:  
+DESIGN a function called area that consumes the length of one side of a square and produces the area of the square. 
+Remember, when we say DESIGN, we mean follow the recipe. Leave behind commented out versions of the stub and template.  
+```racket
+;; Number -> Number ;Signature
+;; multiply the given number by itself ;Purpose
+(check-expect (area 2) (* 2 2)) ;Examples
+(check-expect (area 2.2) (* 2.2 2.2))
+
+;(define (area s) 0) ;Stub
+
+;(define (area s) ;template
+;        (... s))
+
+(define (area s) ;Body
+        (sqr s))
+
+(area 4)
+```
