@@ -19,7 +19,7 @@ Recipe HtDF
 7. Test  
 
 **Example 1**  
-
+Design a function that consume a number and produce twice that number. Call the function double.  
 ```racket
 ;; Number -> Number                  ;Signature
 ;; produce 2 times the given number  ;Purpose
