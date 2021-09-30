@@ -10,6 +10,8 @@ With DrRacket 8.0
 - Function Definitions  
 - Booleans and if Expressions
 - Ussing the Stepper
+- Discovery primitives
+- Recommended Problems
 
 
 
