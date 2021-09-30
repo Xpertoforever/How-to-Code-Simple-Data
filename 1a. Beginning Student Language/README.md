@@ -237,8 +237,7 @@ Also there is another expression "or" "not"
 # Using the Stepper
 How to use the Stepper located in the top right corner, to see each step that our code pass  
 
-
-
+# Discovery primitives
 
 
 
