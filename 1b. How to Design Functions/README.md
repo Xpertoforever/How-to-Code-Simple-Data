@@ -106,7 +106,7 @@ out versions of the stub and template.
 ;(rectangle 10 2 "solid" "purple")
 
 ```
-**Example 5 -Tall-Image**
+**Example 5 -Tall-Image**  
 PROBLEM:  
 DESIGN a function that consumes an image and determines whether the image is tall.  
 Remember, when we say DESIGN, we mean follow the recipe.  
