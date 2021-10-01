@@ -18,3 +18,4 @@ With DrRacket 8.0
 - A Simple Practice Example
 - When Tests are Incorrect
 - Poorly Formed Problems
+- Varying Recipe Order
