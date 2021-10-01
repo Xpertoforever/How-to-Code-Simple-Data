@@ -10,12 +10,12 @@ How To Design Functions (HtDF)
 
 **How To Design Functions (HtDF) SHORT RECIPE**  
 **Recipe HtDF**  
-**1. Signature**
-**2. Purpose**
-**3. Stub**
-**4. Examples**
-**5. Template**
-**6. Body**
+**1. Signature**  
+**2. Purpose**  
+**3. Stub**  
+**4. Examples**  
+**5. Template**  
+**6. Body**  
 **7. Test**  
 
 **Example 1**  
