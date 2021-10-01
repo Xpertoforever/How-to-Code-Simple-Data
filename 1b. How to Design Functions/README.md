@@ -126,7 +126,12 @@ Leave behind commented out versions of the stub and template.
 ;        (... image))
 
 (define (tall? image)  ;Code body
-        (> (image-height image)
+        (if (> (image-height image) (image-width image))
+             true
+             false))
+
+(define (tall? image)  ;Code body
+        (> (image-height image) 
            (image-width image)))
 
 (tall? (rectangle 2 3 "solid" "red"))
