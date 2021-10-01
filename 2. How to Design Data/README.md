@@ -8,4 +8,11 @@ The answer is Yes; both are equivalent
 but by convention we use:  
 - [] around questions and answer pairs in cond 
 
+**To form Condition Expressions**
+```racket
+(cond [ <Expression_Question> <Expression_Answer>]
+      ...)
+;Last question can be else
+```
+
 
