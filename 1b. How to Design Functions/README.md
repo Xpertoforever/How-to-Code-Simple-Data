@@ -107,6 +107,15 @@ out versions of the stub and template.
 ;(rectangle 10 2 "solid" "purple")
 
 ```
+=================================================================  
+When the function result is a boolean, 
+Our function should reflect that also in some point,  
+For that we should add a ? question mark in the end of the function name  
+tall?  
+small?  
+etc.  
+=================================================================  
+
 **Example 5 -Tall-Image**  
 PROBLEM:  
 DESIGN a function that consumes an image and determines whether the image is tall.  
