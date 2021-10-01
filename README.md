@@ -20,3 +20,8 @@ With DrRacket 8.0
 - Poorly Formed Problems
 - Varying Recipe Order
 - Recommended Problems
+- 
+## 2: How to Design Data
+- cond Expressions
+- Atomic-Non distinct
+- HtDF with Non-Primitive Data
