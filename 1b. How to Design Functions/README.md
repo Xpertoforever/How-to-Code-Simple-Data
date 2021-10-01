@@ -74,3 +74,9 @@ Remember, when we say DESIGN, we mean follow the recipe. Leave behind commented 
 
 (area 4)
 ```
+**Example 4 - Image-area** 
+
+
+```racket
+```
+
