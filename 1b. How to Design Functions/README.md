@@ -82,6 +82,22 @@ width by its height.  Follow the HtDF recipe and leave behind commented
 out versions of the stub and template.  
 
 ```racket
+;; Image -> Number ; Signature
+;; provide the multiplication of the width and the height of an image ; Purpose
+
+(check-expect (image-area .) (* 10 20))  ;Examples
+(check-expect (image-area .) (* 15 15))
+(check-expect (image-area .) (* 10 2))
+              
+;(define (image-area img) 0)  ;Stub
+;(define (image-area img)  ;Template
+;        (... img)
+(define (image-area img)  ;Code body
+        (* (image-width img) (image-height img)))
+(image-area .)
+;(rectangle  10 20 "solid" "yellow")
+;(square 15 "solid" "blue")
+;(rectangle 10 2 "solid" "purple")
 
 ```
 
