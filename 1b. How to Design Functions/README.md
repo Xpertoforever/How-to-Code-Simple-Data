@@ -94,7 +94,8 @@ out versions of the stub and template.
 (check-expect (image-area .) (* 15 15))
 (check-expect (image-area .) (* 10 2))
 (check-expect (image-area (rectangle  10 20 "solid" "yellow")) (* 10 20))
-;//IGNORE this line, again when you copy a code from DrRacket which contains an image, into Github, the image will be a point symbol.                
+;//IGNORE this line, again when you copy a code from DrRacket which contains an image, 
+//into Github, the image will be a point symbol.                
 ;(define (image-area img) 0)  ;Stub
 ;(define (image-area img)  ;Template
 ;        (... img)
