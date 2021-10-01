@@ -9,14 +9,14 @@ How To Design Functions (HtDF)
 5. Test and debug until correct
 
 **How To Design Functions (HtDF) SHORT RECIPE**  
-Recipe HtDF  
-1. Signature
-2. Purpose
-3. Stub
-4. Examples
-5. Template
-6. Body
-7. Test  
+**Recipe HtDF**  
+**1. Signature**
+**2. Purpose**
+**3. Stub**
+**4. Examples**
+**5. Template**
+**6. Body**
+**7. Test**  
 
 **Example 1**  
 Design a function that consume a number and produce twice that number. Call the function double.  
