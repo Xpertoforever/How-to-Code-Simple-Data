@@ -18,6 +18,11 @@ How To Design Functions (HtDF)
 **6. Body**  
 **7. Test**  
 
+**For the type of variables**  
+- Number = n  
+- String = s  
+- Image = i  
+
 **Example 1**  
 Design a function that consume a number and produce twice that number. Call the function double.  
 ```racket
