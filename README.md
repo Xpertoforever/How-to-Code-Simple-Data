@@ -19,3 +19,4 @@ With DrRacket 8.0
 - When Tests are Incorrect
 - Poorly Formed Problems
 - Varying Recipe Order
+- Recommended Problems
