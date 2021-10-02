@@ -232,8 +232,8 @@ in a course, which is one of A, B or C.
 ;; - one of: 3 cases:
 ;; Atomic Distinct Value: "A" "B" "C"
 ```  
-**HtDF : Itemization**
-PROBLEM:  
+**HtDF : Itemization**  
+PROBLEM 1:  
 Consider designing the system for controlling a New Year's Eve  
 display. Design a data definition to represent the current state  
 of the countdown, which falls into one of three categories:  
@@ -273,3 +273,38 @@ of the countdown, which falls into one of three categories:
 ;; - atomic non-distinct: Natural[1, 10]
 ;; - atomic distinct: "complete" 
 ```  
+PROBLEM2:  
+Design a data definition for a traffic light that can either be sisabled;  
+or be one of red, yellow or green.  
+```racket
+;Data definititon recipte HtDD
+;1. Structure definition
+;2. Type comment
+;3. Interpretation
+;4. Examples
+;5. A template
+
+;; Data definitions: 
+;; TLight is one of:
+;; -false
+;; -"red"
+;; -"yellow"
+;; -"green"
+;; interp. false means the light is disabled; otherwise the color of the light.
+
+(define TL1 false)
+(define TL2 "red")
+
+(define (fn-for tlight t1)
+  (cond [(false? t1) (...)]
+        [(string=? t1 "red")) (...)]
+        [(string=? t1 "yellow")) (...)]
+        [(string=? t1 "green")) (...)])
+
+;; Template rules used:
+;; - one of: 4 cases
+;; - atomic distinct: false
+;; - atomic distinct: "red"
+;; - atomic distinct: "yellow"
+;; - atomic distinct: "green"
+``` 
