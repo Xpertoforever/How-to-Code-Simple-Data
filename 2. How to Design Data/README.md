@@ -116,7 +116,7 @@ Design a data definition to represent the name of a city.
 ;; Templated rules used
   ;; - atomic non-distinct: String
 ```
-**HtDF With Non-Primitive Data**  
+**HtDD With Non-Primitive Data**  
 How to use the HtDF recipe with non-primitive data (data defined by a data definition).  
 
 PROBLEM:  
@@ -171,7 +171,7 @@ in the world.)
 (define (best? cn)
   (string=? cn "Tacna"))
 ```
-**HtDF : Interval**  
+**HtDD : Interval**  
 PROBLEM:  
 Imagine that you are designing a program to manage ticket sales for a  
 theatre. (Also imagine that the theatre is perfectly rectangular in shape!)   
@@ -203,7 +203,7 @@ row has 32 seats. (Just the seat number, not the row number.)
 ;; atomic non-distinct: Natural[1,32]
 ```
 
-**HtDF : Enumeration**  
+**HtDD : Enumeration**  
 PROBLEM:  
 As part of designing a system to keep track of student grades, you  
 are asked to design a data definition to represent the letter grade   
@@ -232,7 +232,7 @@ in a course, which is one of A, B or C.
 ;; - one of: 3 cases:
 ;; Atomic Distinct Value: "A" "B" "C"
 ```  
-**HtDF : Itemization**  
+**HtDD : Itemization**  
 PROBLEM 1:  
 Consider designing the system for controlling a New Year's Eve  
 display. Design a data definition to represent the current state  
@@ -307,4 +307,58 @@ or be one of red, yellow or green.
 ;; - atomic distinct: "red"
 ;; - atomic distinct: "yellow"
 ;; - atomic distinct: "green"
+``` 
+**HtDF with Interval**  
+PROBLEM:  
+Using the SeatNum data definition below design a function  
+that produces true if the given seat number is on the aisle
+```racket
+;Data definititon recipte HtDD
+;1. Structure definition
+;2. Type comment
+;3. Interpretation
+;4. Examples
+;5. A template
+
+;;Note:
+;; [] Brackets mean inclusive at the end of the interval
+;; () Brackets mean exclusive
+;; SeatNum is Natural[1,32]
+;; interp. seat numbers in a row, 1 and 32 are aisle seats
+
+(define SN1 1)   ;aisle
+(define SN2 12)  ;middle
+(define SN3 32)  ;aisle
+
+#;
+(define (fn-for-seat-num sn)
+  (... sn))
+
+;; Template rules used:
+;; atomic non-distinct: Natural[1,32]
+
+;; Functions:
+;Recipe HtDF
+;1. Signature
+;2. Purpose
+;3. Stub
+;4. Examples
+;5. Template
+;6. Body
+;7. Test
+
+;; SeatNum -> Boolean
+;; produce true if the given seat number is on the aisle
+(check-expect (aisle? 1) true) ;Examples
+(check-expect (aisle? 16) false)
+(check-expect (aisle? 32) true)
+
+;(define (aisle? sn) false) ;stub
+
+;(define (aisle? sn) ; Template
+;        (... sn)
+
+(define (aisle? sn) ; 
+        (or (= sn 1)
+            (= sn 32) ))
 ``` 
