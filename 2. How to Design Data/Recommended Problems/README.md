@@ -1,4 +1,4 @@
-##PROBLEM 1##  
+## PROBLEM 1 ##  
 PROBLEM A:  
 You are assigned to develop a system that will classify   
 buildings in downtown Vancouver based on how old they are.   
