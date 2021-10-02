@@ -46,6 +46,18 @@ Problem Domain
 Program  
 - 0 : Representation  
 
+**About our codes** 
+With data definition our codes will have 2 parts :  
+```racket
+;; Data definitions:
+
+HERE THE DATA DEFINITION CODE
+
+;; Functions:
+
+HERE THE FUNCTIONS
+
+```
 Data definition describes:  
 -How to form data of a new type  
 -How to represent information as data  
@@ -103,3 +115,63 @@ Design a data definition to represent the name of a city.
 ;; Templated rules used
   ;; - atomic non-distinct: String
 ```
+**HtDF With Non-Primitive Data**  
+How to use the HtDF recipe with non-primitive data (data defined by a data definition).  
+
+PROBLEM:  
+Using the CityName data definition below design a function  
+that produces true if the given city is the best in the world.   
+(You are free to decide for yourself which is the best city   
+in the world.)  
+```racket
+;; Data definitions:
+
+
+;; CityName is String
+;; interp. the name of a city
+(define CN1 "Boston")
+(define CN2 "Vancouver")
+#;
+(define (fn-for-city-name cn)
+  (... cn))
+
+;; Template rules used:              For the first part of the course
+;;   atomic non-distinct: String     we want you to list the template
+;;                                   rules used after each template.
+;;
+
+;; Functions:
+
+;; CityName -> Boolean
+;; produce true if the given city is Tacna
+(check-expect (best? "Boston") false) ;Examples
+(check-expect (best? "Tacna") true)
+
+;(define (best? cn) false) ;Stub
+
+;took template from CityName
+; Note: when function has two cases flesh out
+; the template by wrapping if around 3 copies of the template body
+#; ;First step
+(define (fn-for-city-name cn)
+  (... cn))
+#; ;Second step
+(define (best? cn)
+  (if (... cn)
+      (... cn)
+      (... cn)))
+#; ;Thrid step
+(define (best? cn)
+  (if (string=? cn "Tacna")
+      true
+      false))  
+
+;Fourth step
+(define (best? cn)
+  (string=? cn "Tacna"))
+```
+
+
+
+
+
