@@ -78,7 +78,8 @@ A data definition consists of 4 or five parts:
 4. One or more examples of the data.  
 5. A template for a 1 argument function operating on data of this type.  
 
-;Data definititon recipte HtDD  
+** *Short Recipe HtDD* **  
+;Data definititon recipe HtDD  
 ;1. Structure definition  
 ;2. Type comment  
 ;3. Interpretation  
@@ -202,7 +203,33 @@ row has 32 seats. (Just the seat number, not the row number.)
 ;; atomic non-distinct: Natural[1,32]
 ```
 
+**HtDF : Enumeration**  
+PROBLEM:  
+As part of designing a system to keep track of student grades, you  
+are asked to design a data definition to represent the letter grade   
+in a course, which is one of A, B or C.  
+```racket
+;Data definititon recipte HtDD
+;1. Structure definition
+;2. Type comment
+;3. Interpretation
+;4. Examples
+;5. A template
 
+;; LetterGrade is one of:
+;; - "A"
+;; - "B"
+;; - "C"
+;; interp. the letter grade in a course
+;; <examples are redundant for enumerations>
+#;
+(define (fn-for-letter-grade lg)
+  (con [(string=? lg "A") (...)] 
+       [(string=? lg "B") (...)] 
+       [(string=? lg "C") (...)]))
 
-
+;; Template rules used:
+;; - one of: 3 cases:
+;; Atomic Distinct Value: "A" "B" "C"
+```  
 
