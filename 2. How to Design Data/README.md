@@ -474,3 +474,16 @@ image showing the current status of the countdown.
 
 (countdown-to-image 5)
 ``` 
+
+
+### **Structure of Information Flows Through** ###
+**Structure**  
+- Information  
+- Data  
+- Template  
+- Functions / Test  
+
+Identifying the structure of the information is a key step in programd design   
+As data definitions get more sophisticated you will see that   
+choosing the structure to use is a point of leverage in   
+designing the overall program  
