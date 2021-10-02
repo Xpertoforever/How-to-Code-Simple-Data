@@ -72,3 +72,78 @@ that determines whether a building should be torn down or not.
         [(string=?  bs "heritage") false]))
 
 ```
+## PROBLEM 2 ##  
+PROBLEM A:  
+You are designing a program to track a rocket's journey as it descends   
+100 kilometers to Earth. You are only interested in the descent from   
+100 kilometers to touchdown. Once the rocket has landed it is done.  
+Design a data definition to represent the rocket's remaining descent.   
+Call it RocketDescent.  
+```racket
+;; =================
+;; Data definitions:
+
+;Data definititon recipe HtDD
+;1. Structure definition
+;2. Type comment
+;3. Interpretation
+;4. Examples
+;5. A template
+
+;; RocketDescent is one of:
+;; false
+;; - Number(0, 100]
+;; interp.
+;; false means rocket descent has ended, otherwise number of kilometer left to earth
+(define rd1 100)
+(define rd2 50)
+(define rd3 0.5)
+(define rd4 false)
+#;
+(define (fn-for-Rocket-descent rd)
+  (cond [(and (number? rd)
+              (< 0 rd)
+              (<= rd 100)) (... rd)]
+        [else (...)]))
+
+;; Template rules used:
+;; - one of 2 cases:
+;;  - atomic non-distinct: Number[100, 0) 
+;;  - atomic distinct: false
+```
+PROBLEM B:  
+Design a function that will output the rocket's remaining descent distance   
+in a short string that can be broadcast on Twitter.   
+When the descent is over, the message should be "The rocket has landed!".  
+Call your function rocket-descent-to-msg.  
+```racket
+;; =================
+;; Functions:
+
+;Recipe HtDF
+;1. Signature
+;2. Purpose
+;3. Stub
+;4. Examples
+;5. Template
+;6. Body
+;7. Test
+
+;; RocketDescent -> String ;Signature
+;; Update on rocket's descent distance ;Purpose
+(check-expect (rocket-descent-to-msg 100) "Altitude is 100 kms.")
+(check-expect (rocket-descent-to-msg 50) "Altitude is 50 kms.")
+(check-expect (rocket-descent-to-msg 1) "Altitude is 1 kms.")
+(check-expect (rocket-descent-to-msg 0.5) "Altitude is 1/2 kms.")
+(check-expect (rocket-descent-to-msg false) "The rocket has landed!")
+
+
+;(define (rocket-descent-to-msg rd) "") ;Stub
+
+;<use template from RocketDescent>
+(define (rocket-descent-to-msg rd)
+  (cond [(and (number? rd)
+              (< 0 rd)
+              (<= rd 100)) (string-append "Altitude is " (number->string rd) " kms.")]
+        [else "The rocket has landed!"]))
+```
