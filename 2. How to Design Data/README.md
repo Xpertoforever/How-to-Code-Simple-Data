@@ -362,3 +362,48 @@ that produces true if the given seat number is on the aisle
         (or (= sn 1)
             (= sn 32) ))
 ``` 
+**HtDF with Enumeration** 
+PROBLEM:  
+Using the LetterGrade data definition below desing a function that  
+consmes a letter grade and produces the next highest letter grade.  
+Call your function bum-up  
+```racket
+;Data definititon recipte HtDD
+;1. Structure definition
+;2. Type comment
+;3. Interpretation
+;4. Examples
+;5. A template
+
+;; LetterGrade is one of:
+;; - "A"
+;; - "B"
+;; - "C"
+;; interp. the letter grade in a course
+;; <examples are redundant for enumerations>
+#;
+(define (fn-for-letter-grade lg)
+  (cond [(string=? lg "A") (...)] 
+       [(string=? lg "B") (...)] 
+       [(string=? lg "C") (...)]))
+
+;; Template rules used:
+;; - one of: 3 cases:
+;; Atomic Distinct Value: "A" "B" "C"
+
+;; Functions:
+
+;; LetterGrade -> LetterGrade
+;; produce next highest letter grade (no change for A)
+(check-expect (bump-up "C") "B") ; Example
+(check-expect (bump-up "B") "A")
+(check-expect (bump-up "A") "A")
+
+;(define (bump-up lg) "A") 
+
+;<use template from LetterGrade>
+(define (bump-up lg)
+  (cond [(string=? lg "A") "A"] 
+       [(string=? lg "B") "A"] 
+       [(string=? lg "C") "B"]))
+``` 
