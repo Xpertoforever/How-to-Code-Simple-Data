@@ -78,12 +78,12 @@ A data definition consists of 4 or five parts:
 4. One or more examples of the data.  
 5. A template for a 1 argument function operating on data of this type.  
 
-**Data definititon recipte HtDD**  
-1. Structure definition
-2. Type comment
-3. Interpretation
-4. Examples
-5. A template
+;Data definititon recipte HtDD  
+;1. Structure definition  
+;2. Type comment  
+;3. Interpretation  
+;4. Examples  
+;5. A template  
  
 For a given type TypeName the data driven template is:  
 ```racket
