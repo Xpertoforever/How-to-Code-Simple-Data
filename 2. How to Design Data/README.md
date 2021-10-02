@@ -78,7 +78,7 @@ A data definition consists of 4 or five parts:
 4. One or more examples of the data.  
 5. A template for a 1 argument function operating on data of this type.  
 
-** *Short Recipe HtDD* **  
+**Short Recipe HtDD**  
 ;Data definititon recipe HtDD  
 ;1. Structure definition  
 ;2. Type comment  
