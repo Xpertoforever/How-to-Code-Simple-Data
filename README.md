@@ -25,3 +25,11 @@ With DrRacket 8.0
 - cond Expressions
 - Atomic-Non distinct
 - HtDF with Non-Primitive Data
+- HtDD Interval  
+- HtDD Enumartion  
+- HtDD Itemization  
+- HtDF with Interval
+- HtDF with Enumaration  
+- HtDF with Itemization  
+- Structure of Information flow through  
+- Recommended PRoblems
