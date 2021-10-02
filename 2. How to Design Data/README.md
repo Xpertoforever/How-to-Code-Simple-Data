@@ -407,3 +407,70 @@ Call your function bum-up
        [(string=? lg "B") "A"] 
        [(string=? lg "C") "B"]))
 ``` 
+**HtDF with Itemization**  
+PROBLEM:  
+You are asked to contribute to the design for a very simple New Year's  
+Eve countdown display. You already have the data definition given below.  
+You need to design a function that consumes Countdown and produce and  
+image showing the current status of the countdown.  
+```racket
+;Data definititon recipte HtDD
+;1. Structure definition
+;2. Type comment
+;3. Interpretation
+;4. Examples
+;5. A template
+
+;; CountDown is one of:
+;; - false 
+;; - Natural[1, 10]
+;; - "complete"
+;; interp.
+;; false means countdown has not yet started
+;; Natural[1, 10] means countdown is running and how many seconds
+;; "complete" means countdown is over
+(define CD1 false)
+(define CD2 10)
+(define CD3 1)
+(define CD4 "complete")
+
+#;
+(define (fn-for-countdown c)
+  (cond [(false? c) (...)]
+        [(and (number? c) (<= 1 c) (<= c 10)) (... c)]
+        [else (...)]))
+
+;; Template rules used:
+;; - one of: 3 cases
+;; - atomic distinct: false
+;; - atomic non-distinct: Natural[1, 10]
+;; - atomic distinct: "complete"
+
+;; Functions:
+;Recipe HtDF
+;1. Signature
+;2. Purpose
+;3. Stub
+;4. Examples
+;5. Template
+;6. Body
+;7. Test
+
+;; Countdown -> Image ;Signature
+;; show a image of the current status; False, Countdown or Complete
+(check-expect (countdown-to-image false) (square 0 "solid" "white" ))
+(check-expect (countdown-to-image 5) (text (number->string 5) 24 "black"))
+(check-expect (countdown-to-image "complete") (text "Happy New Year" 24 "red"))
+
+;(define (countdown-to-image c) (square 0 "solid" "white" )) ;Stub
+
+;<use template from countdown>
+
+(define (countdown-to-image c) 
+  (cond [(false? c) (square 0 "solid" "white" )]
+        [(and (number? c) (<= 1 c) (<= c 10))
+         (text (number->string c) 24 "black")]
+        [else (text "Happy New Year" 24 "red")]))
+
+(countdown-to-image 5)
+``` 
