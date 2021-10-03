@@ -1,13 +1,13 @@
 ## The big-bang Mechanism  
 The big-bang let us execute two or more functions together. 
-´´´Racket
+```Racket
 If your program needs to:	Then it needs this option:  
 change as time goes by (nearly all do)	on-tick   
 display something (nearly all do)	      to-draw  
 change in response to key presses	      on-key  
 change in response to mouse activity  	on-mouse  
 stop automatically	                    stop-when  
-´´´
+```
 ## Domain Analysis
 
 ;Domain analysis (use a piece of paper!)
@@ -33,7 +33,7 @@ To help you get started, here is a picture of a cat, which we
 have taken from the 2nd edition of the How to Design Programs   
 book on which this course is based.  
 
-´´´Racket
+```Racket
 ;Domain analysis (use a piece of paper!)
 ;1. Sketch program scenarios
 ;2. Identify constant information
@@ -55,4 +55,4 @@ book on which this course is based.
 ;; Identify big-bang options
 ;; - on-tick
 ;; - to-draw
-´´´
+```
