@@ -33,3 +33,11 @@ With DrRacket 8.0
 - HtDF with Itemization  
 - Structure of Information flow through  
 - Recommended PRoblems
+
+## 3a: How to Design World
+- The big-bang Mechanism
+- Domain Analysis
+- Program through main Function
+- Working through the Wish List
+- Improving a World Program - Add key handler
+
