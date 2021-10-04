@@ -205,9 +205,33 @@ book on which this course is based.
 (define (render c)
     (place-image CAT-IMG c CRT-Y MTS))
 ```
+## Improving a World Program  
+The analysis is a model of the program  
+Because it correctly describes the structure of the program,  
+but has less detail, we can plan our work on the program by marking up the analysis.  
 
+**Adding SPEED**
+Necessary to change the below parts as you can see:  
+```Racket   
+;; Constants:
+(define SPEED 3)
 
+;; Cat -> Cat
+;; produce the next by advancing it 1 pixel to right
+(check-expect (advance-cat 3) (+ 3 SPEED))
+(check-expect (advance-cat 5) (+ 5 SPEED))
 
+;(define (advance-cat c) 0)    ;Stub 
+
+;<Use template from Cat>
+(define (advance-cat c)
+    (+ c SPEED))
+```
+
+**Adding KEYBOARD Interaction**
+
+PROBLEM:  
+Extend the program so that pressing the space key causes the cat to jump back to the left edge of the window.  
 
 
 
