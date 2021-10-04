@@ -233,7 +233,31 @@ Necessary to change the below parts as you can see:
 PROBLEM:  
 Extend the program so that pressing the space key causes the cat to jump back to the left edge of the window.  
 
+```Racket
+;; =================
+;; Functions:
+
+;; Cat -> Cat
+;; start the world with (main 0)
+;; 
+(define (main c)
+   (big-bang c                              ; Cat
+            (on-tick   advance-cat)         ; Cat -> Cat
+            (to-draw   render)            ; Cat -> Image
+            (on-key handle-key)))                ; Cat KeyEvent -> Cat
+
+;; Cat KeyEvent -> Cat
+;; reset cat to left edge when space key is pressed
+(check-expect (handle-key 10 " ") 0)
+(check-expect (handle-key 10 "a") 10)
+(check-expect (handle-key 0 " ") 0)
+(check-expect (handle-key 0 "a") 0)
+
+;(define (handle-key c ke) 0) ;stub
 
 
-
+(define (handle-key c ke)
+  (cond [(key=? ke " ") 0]
+        [else c]))
+```
 
