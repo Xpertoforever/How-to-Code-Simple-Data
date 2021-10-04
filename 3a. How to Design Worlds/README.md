@@ -86,8 +86,33 @@ To help you get started, here is a picture of a cat, which we
 have taken from the 2nd edition of the How to Design Programs   
 book on which this course is based.  
 ```Racket
+(require 2htdp/image)
+(require 2htdp/universe)
+
+;; A cat that walks from left to right across the screen
+
+;; =================
+;; Constants:
+(define WIDTH 600)
+(define HEIGHT 400)
+(define CRT-Y (/ HEIGHT 2))
+(define MTS (empty-scene WIDTH HEIGHT))
+(define CAT-IMG .)
+
 ;; =================
 ;; Data definitions:
+(require 2htdp/image)
+(require 2htdp/universe)
+
+;; A cat that walks from left to right across the screen
+
+;; =================
+;; Constants:
+(define WIDTH 600)
+(define HEIGHT 400)
+(define CRT-Y (/ HEIGHT 2))
+(define MTS (empty-scene WIDTH HEIGHT))
+(define CAT-IMG .)
 
 ;; Cat is Number
 ;; interp. x is the position of the in the screen coordinates
@@ -115,7 +140,71 @@ book on which this course is based.
             (to-draw   render)))            ; Cat -> Image
 ```
 
+## Working through the Wish List
+```Racket
+(require 2htdp/image)
+(require 2htdp/universe)
 
+;; A cat that walks from left to right across the screen
+
+;; =================
+;; Constants:
+(define WIDTH 600)
+(define HEIGHT 400)
+(define CRT-Y (/ HEIGHT 2))
+(define MTS (empty-scene WIDTH HEIGHT))
+(define CAT-IMG .)
+
+;; =================
+;; Data definitions:
+
+;; Cat is Number
+;; interp. x is the position of the in the screen coordinates
+
+(define C1 0) ;left edge
+(define C2 (/ HEIGHT 2)) ;middle
+(define C3 HEIGHT) ;right edge
+#;
+(define (fn-for-cat c)
+    (... c))
+
+;; Template rules used:
+;; atomic non-distinct: Number
+
+
+;; =================
+;; Functions:
+
+;; Cat -> Cat
+;; start the world with (main 0)
+;; 
+(define (main c)
+   (big-bang c                              ; Cat
+            (on-tick   advance-cat)         ; Cat -> Cat
+            (to-draw   render)))            ; Cat -> Image
+
+
+;; Cat -> Cat
+;; produce the next by advancing it 1 pixel to right
+(check-expect (advance-cat 3) 4)
+(check-expect (advance-cat 5) 6)
+
+;(define (advance-cat c) 0)    ;Stub 
+
+;<Use template from Cat>
+(define (advance-cat c)
+    (+ c 1))
+
+;; Cat -> Image
+;; render the cat image at appropiate place on MTS 
+(check-expect (render 4) (place-image CAT-IMG 4 CRT-Y MTS))
+
+;(define (render c) MTS)
+
+;<Use template from Cat>
+(define (render c)
+    (place-image CAT-IMG c CRT-Y MTS))
+```
 
 
 
