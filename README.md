@@ -40,4 +40,6 @@ With DrRacket 8.0
 - Program through main Function
 - Working through the Wish List
 - Improving a World Program - Add key handler
+- Recommended PRoblems
 
+## 3B: Compound Data
