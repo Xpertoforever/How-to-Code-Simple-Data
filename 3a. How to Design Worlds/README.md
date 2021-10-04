@@ -1,7 +1,8 @@
 ## The big-bang Mechanism  
 The big-bang let us execute two or more functions together.   
 ```Racket  
-If your program needs to:	Then it needs this option:  
+If your program needs to:	 
+Then it needs this option:   
 change as time goes by (nearly all do)	on-tick   
 display something (nearly all do)	      to-draw  
 change in response to key presses	      on-key  
