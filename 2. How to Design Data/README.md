@@ -88,6 +88,7 @@ A data definition consists of 4 or five parts:
 
 **Ready to copy on DrRacket**  
 ```racket
+Version 1
 ; ______________________________
 ;|Data definititon recipe HtDD  |
 ;|1. Structure definition   [x] |
@@ -98,6 +99,7 @@ A data definition consists of 4 or five parts:
 ;|6. Templates Rules used   [x] |
 ;|______________________________|
 
+Version 2
 ; ______________________________
 ;|Data definititon recipe HtDD  |
 ;|1. Structure definition       |
