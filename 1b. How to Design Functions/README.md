@@ -18,6 +18,18 @@ How To Design Functions (HtDF)
 **6. Body**  
 **7. Test**  
 
+**Ready to copy in DrRacket**  
+```racket
+; ______________________________
+;|- HtDF Recipe                 |
+;|1. Signature                  |
+;|2. Purpose                    |
+;|3. Stub                       |
+;|4. Examples                   | 
+;|5. Code Body                  |
+;|6. Test                       |
+;|______________________________|
+```
 **For the type of variables**  
 - Number = n  
 - String = s  
