@@ -15,7 +15,7 @@ make-pos ;constructor
 pos-x pos-y ;selectors  
 pos? ;predicate  
  
-
+i.g. 
 (define-struct pos(x y))
 
 ;(make-pos 5 7) ;constructor
