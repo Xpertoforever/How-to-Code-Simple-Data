@@ -261,4 +261,72 @@ Extend the program so that pressing the space key causes the cat to jump back to
         [else c]))
 ```
 
-## **Adding KEYBOARD Interaction**
+## **My HtDW Template**
+```Racket
+(require 2htdp/image)
+(require 2htdp/universe)
+;; My world program  (make this more specific)
+
+;; ==================================================
+;; Constants:
+
+    
+;; ==================================================
+;; Data Definitions:
+; ______________________________
+;|Data definititon recipe HtDD  |
+;|1. Structure definition       |
+;|2. Type comment               |
+;|3. Interpretation             |
+;|4. Examples                   | 
+;|5. A template                 |
+;|6. Templates Rules used       |
+;|______________________________|
+
+;; WS is ... (give WS a better name)
+
+
+
+;; ==================================================
+;; Functions:
+; ______________________________
+;|- HtDF Recipe                 |
+;|1. Signature                  |
+;|2. Purpose                    |
+;|3. Stub                       |
+;|4. Examples                   | 
+;|5. Code Body                  |
+;|6. Test                       |
+;|______________________________|
+
+;; --------------------------------------------------
+;; Big-Bang
+
+;; WS -> WS
+;; start the world with ...
+;; 
+(define (main ws)
+  (big-bang ws                   ; WS
+            (on-tick   tock)     ; WS -> WS
+            (to-draw   render)   ; WS -> Image
+            (stop-when ...)      ; WS -> Boolean
+            (on-mouse  ...)      ; WS Integer Integer MouseEvent -> WS
+            (on-key    ...)))    ; WS KeyEvent -> WS
+            
+;; --------------------------------------------------
+;; Function 1
+;; WS -> WS
+;; produce the next ...
+;; !!!
+(define (tock ws) ...)
+
+;; --------------------------------------------------
+;; Function 2
+;; WS -> Image
+;; render ... 
+;; !!!
+(define (render ws) ...)
+            
+;; --------------------------------------------------            
+
+```
