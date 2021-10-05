@@ -303,7 +303,7 @@ Extend the program so that pressing the space key causes the cat to jump back to
             (on-mouse  ...)      ; WS Integer Integer MouseEvent -> WS
             (on-key    ...)))    ; WS KeyEvent -> WS
             
-;; --------------------------------------------------           
+;; --------------------------------------------------     
 ; ______________________________
 ;|- HtDF Recipe                 |
 ;|1. Signature                  |
@@ -312,8 +312,7 @@ Extend the program so that pressing the space key causes the cat to jump back to
 ;|4. Examples                   | 
 ;|5. Code Body                  |
 ;|6. Test                       |
-;|______________________________|
-           
+;|______________________________|         
 ;; --------------------------------------------------
 ;; Function 1
 ;; WS -> WS
