@@ -84,8 +84,19 @@ A data definition consists of 4 or five parts:
 ;2. Type comment  
 ;3. Interpretation  
 ;4. Examples  
-;5. A template  
- 
+;5. A template 
+
+**Ready to copy on DrRacket**  
+```racket
+; ______________________________
+;|Data definititon recipe HtDD  |
+;|1. Structure definition       |
+;|2. Type comment               |
+;|3. Interpretation             |
+;|4. Examples                   | 
+;|5. A template                 |
+;|______________________________|
+```
 For a given type TypeName the data driven template is:  
 ```racket
 (define (fn-for-type-name x)
