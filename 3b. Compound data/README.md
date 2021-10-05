@@ -5,6 +5,7 @@ name_struct : Structure name
 name_fied: field names   
 
 A structure definition define  
+```racket
 - constructor : make-<structure-name>  
 - selector(s): <structure-name>-<field-name>  
 - predicate: <structure-name?>  
@@ -14,7 +15,7 @@ make-pos ;constructor
 pos-x pos-y ;selectors  
 pos? ;predicate  
  
-```racket
+
 (define-struct pos(x y))
 
 ;(make-pos 5 7) ;constructor
