@@ -90,11 +90,12 @@ A data definition consists of 4 or five parts:
 ```racket
 ; ______________________________
 ;|Data definititon recipe HtDD  |
-;|1. Structure definition       |
-;|2. Type comment               |
-;|3. Interpretation             |
-;|4. Examples                   | 
-;|5. A template                 |
+;|1. Structure definition   [x] |
+;|2. Type comment           [x] |
+;|3. Interpretation         [x] |
+;|4. Examples               [x] | 
+;|5. A template             [x] |
+;|6. Templates Rules used   [x] |
 ;|______________________________|
 ```
 For a given type TypeName the data driven template is:  
