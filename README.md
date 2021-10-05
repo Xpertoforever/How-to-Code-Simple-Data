@@ -45,5 +45,5 @@ With DrRacket 8.0
 ## 3b: Compound Data
 - Define Struct
 - Compound Data definition
-- Practice problems
+- Practice Problems / Compound Data  
 - HtDW with Compoun Data
