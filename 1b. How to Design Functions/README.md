@@ -20,6 +20,18 @@ How To Design Functions (HtDF)
 
 **Ready to copy in DrRacket**  
 ```racket
+Version 1
+; ______________________________
+;|- HtDF Recipe          [ ]    |
+;|1. Signature           [ ]    |
+;|2. Purpose             [ ]    |
+;|3. Stub                [ ]    |
+;|4. Examples            [ ]    | 
+;|5. Code Body           [ ]    |
+;|6. Test                [ ]    |
+;|______________________________|
+
+Version 2
 ; ______________________________
 ;|- HtDF Recipe                 |
 ;|1. Signature                  |
