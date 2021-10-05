@@ -20,7 +20,7 @@ With DrRacket 8.0
 - Poorly Formed Problems
 - Varying Recipe Order
 - Recommended Problems
-- 
+
 ## 2: How to Design Data
 - cond Expressions
 - Atomic-Non distinct
@@ -43,3 +43,7 @@ With DrRacket 8.0
 - Recommended PRoblems
 
 ## 3B: Compound Data
+- Define Struct
+- Compound Data definition
+- Practice problems
+- HtDW with Compoun Data
