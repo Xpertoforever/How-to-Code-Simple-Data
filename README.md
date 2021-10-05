@@ -42,7 +42,7 @@ With DrRacket 8.0
 - Improving a World Program - Add key handler
 - Recommended PRoblems
 
-## 3B: Compound Data
+## 3b: Compound Data
 - Define Struct
 - Compound Data definition
 - Practice problems
