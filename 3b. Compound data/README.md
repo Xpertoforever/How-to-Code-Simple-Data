@@ -373,8 +373,175 @@ nose hits the edge of the window, not the center of its body.
 ;; --------------------------------------------------       
  
 ```
+## Recommended Problem - Water Balloon  
+PROBLEM:  
+**Solution: File 6 :Recommended Problem - Water Balloon**  
+In this problem, we will design an animation of throwing a water balloon.  
+When the program starts the water balloon should appear on the left side 
+of the screen, half-way up.  Since the balloon was thrown, it should 
+fly across the screen, rotating in a clockwise fashion. Pressing the 
+space key should cause the program to start over with the water balloon
+back at the left side of the screen. 
+
+NOTE: Please include your domain analysis at the top in a comment box. 
+
+Use the following images to assist you with your domain analysis:
 
 
+1)
+2).
+.
+3)
+.
+4)
+
+.
+    
+
+Here is an image of the water balloon:
+(define WATER-BALLOON.)
+
+
+
+NOTE: The rotate function wants an angle in degrees as its first 
+argument. By that it means Number[0, 360). As time goes by your balloon 
+may end up spinning more than once, for example, you may get to a point 
+where it has spun 362 degrees, which rotate won't accept. 
+
+The solution to that is to use the modulo function as follows:
+
+(rotate (modulo ... 360) (text "hello" 30 "black"))
+
+where ... should be replaced by the number of degrees to rotate.
+
+NOTE: It is possible to design this program with simple atomic data, 
+but we would like you to use compound data.
+
+```racket
+(require 2htdp/image)
+(require 2htdp/universe)
+
+;; A water balloon going from left->right and rotating in his center
+;; ==================================================
+;; Constant:
+;;  - width
+;;  - height
+;;  - Center-Y
+;;  - mts: Backgroud
+;;  - cat image
+
+;; Changing:
+;; - X coordinate of cat
+;; - degree
+
+;; Identify big-bang options
+;; - on-tick
+;; - to-draw
+;; - on-key
+
+;; ==================================================
+;; Constants:
+(define WIDTH 600)
+(define HEIGHT 400)
+(define CTR-Y (/ HEIGHT 2))
+(define MTS (empty-scene WIDTH HEIGHT))
+(define WATER-BALLOON .)
+
+;; ==================================================
+;; Data Definitions:
+; ______________________________
+;|Data definititon recipe HtDD  |
+;|1. Structure definition       |
+;|2. Type comment               |
+;|3. Interpretation             |
+;|4. Examples                   | 
+;|5. A template                 |
+;|6. Templates Rules used       |
+;|______________________________|
+
+(define-struct wball (pos degree))
+;; Wball is (make-Wball Number Number[0, 360])
+;; interp. (make-Wball pos degree) is a water balloon with
+;;         pos is the x coordinate in the screen
+;;         degree is the rotation applied in this position
+
+(define WM1 (make-wball 0 0))
+(define WM2 (make-wball 20 50))
+#;
+(define (fn-for-wball wb)
+     (... (wball-pos wb)       ; Number
+          (wball-degree wb)))  ; Number [0, 360]
+
+;; Template rules used:
+;; - Compound: 2 fields
+
+;; ==================================================
+;; Functions:
+;; --------------------------------------------------
+;; Big-Bang
+
+;; Wball -> Wball
+;; Call to through a water balloon from left->right; start the world with (main (make-wball 0 0))
+;; 
+(define (main wb)
+  (big-bang wb                                   ; Wball
+            (on-tick   advance-wball 0.01)     ; Wball -> Wball
+            (to-draw   render-wball)      ; Wball -> Image
+            (on-key    handle-key)))                      ; Wball KeyEvent -> Wball
+; Big-bang others options not used:    
+;            (stop-when ...)      ; WS -> Boolean
+;            (on-mouse  ...)      ; WS Integer Integer MouseEvent -> WS
+;            (on-key    ...)))    ; WS KeyEvent -> WS
+            
+;; --------------------------------------------------     
+; ______________________________
+;|- HtDF Recipe                 |
+;|1. Signature                  |
+;|2. Purpose                    |
+;|3. Stub                       |
+;|4. Examples                   | 
+;|5. Code Body                  |
+;|6. Test                       |
+;|______________________________|         
+;; --------------------------------------------------
+;; Function 1
+;; ; Wball -> Wball
+;; produce the next Water balloon position in the screen
+(check-expect (advance-wball (make-wball 0 0)) (make-wball 1 1))
+(check-expect (advance-wball (make-wball 10 20)) (make-wball 11 21))
+    
+;(define (advance-wball wb) wb)   ;Stub
+; <Use template from Wball>
+
+(define (advance-wball wb)
+     (make-wball (+ (wball-pos wb) 1) (+ (wball-degree wb) 1)))
+     
+;; --------------------------------------------------
+;; Function 2
+;; Wball -> Image
+;; render the Water balloon in the position and degree appropiate
+(check-expect (render-wball (make-wball 0 0))
+              (place-image (rotate (- (modulo 0 360)) WATER-BALLOON) 0 CTR-Y MTS))
+
+;(define (render-wball ws) MTS)  ;Stub
+; <Use Template from Wball>
+
+(define (render-wball wb)
+     (place-image (rotate (- (modulo (wball-degree wb) 360)) WATER-BALLOON) (wball-pos wb) CTR-Y MTS))            
+;; --------------------------------------------------
+;; Function 3
+;; Wball KeyEvent -> Wball
+;; Restart the walking of the water balloon
+(check-expect (handle-key (make-wball 10 3) " ") (make-wball 0 0))
+(check-expect (handle-key (make-wball 10 50) " ") (make-wball 0 0))
+
+;(define (handle-key wb ke) c) ;Stub
+
+(define (handle-key wb ke)
+  (cond [(key=? ke " ") (make-wball 0 0)]
+        [else wb]))   
+;; --------------------------------------------------
+```
 
 
 
