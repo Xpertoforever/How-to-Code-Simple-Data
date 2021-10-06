@@ -60,7 +60,7 @@ their first and last names.
 ```
 ## Practice - Recommended Problems   
 ## Problem 1  
-PROBLEM A:  
+**PROBLEM A:**  
 Design a data definition to represent a movie, including    
 title, budget, and year released.  
 To help you to create some examples, find some interesting movie facts below:   
@@ -99,7 +99,7 @@ However, feel free to resarch more on your own!
 ;; Template rules used:
 ;;  - compound: 3 fields
 ```
-PROBLEM B:  
+**PROBLEM B:**   
 You have a list of movies you want to watch, but you like to watch your   
 rentals in chronological order. Design a function that consumes two movies   
 and produces the title of the most recently released movie.  
