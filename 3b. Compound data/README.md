@@ -140,14 +140,72 @@ parameters.
        (movie-ti m1)
        (movie-ti m2)))
 ```
+## Problem 2   
+**PROBLEM A:**     
+Design a data definition to help a teacher organize their next field trip.   
+On the trip, lunch must be provided for all students. For each student, track   
+their name, their grade (from 1 to 12), and whether or not they have allergies.  
+```racket
+;; Data definitions:
+;; =================
+; ______________________________
+;|Data definititon recipe HtDD  |
+;|1. Structure definition       |
+;|2. Type comment               |
+;|3. Interpretation             |
+;|4. Examples                   | 
+;|5. A template                 |
+;|6. Templates Rules used       |
+;|______________________________|
 
+(define-struct student (name grade allergies?))
+;; Student is (make-student String Natural[1, 12] Boolean)
+;; interp. (make-student name grade allergies) is a student with
+;;          name is the name
+;;          grade is the grade 1-12
+;;          allergies is true if they have allergies
 
+(define S1 (make-student "Daniel" 5 true))
+(define S2 (make-student "Miguel" 12 false))
 
+#;
+(define (fn-for-student s)
+     (... (student-name s)         ; String
+          (student-grade s)        ; Natural[1, 12]
+          (student-allergies? s)))  ; Boolean
 
+;; Template rules used:
+;; - Compound: 3 fields
+```
+**PROBLEM B:**  
+To plan for the field trip, if students are in grade 6 or below, the teacher   
+is responsible for keeping track of their allergies. If a student has allergies,   
+and is in a qualifying grade, their name should be added to a special list.   
+Design a function to produce true if a student name should be added to this list.  
+```racket
+;; Functions:
+;; =================
+; ______________________________
+;|- HtDF Recipe                 |
+;|1. Signature                  |
+;|2. Purpose                    |
+;|3. Stub                       |
+;|4. Examples                   | 
+;|5. Code Body                  |
+;|6. Test                       | 
+;|______________________________|
 
+;; Student -> Boolean
+;; produce true if the student grade is between [1, 6] and with allergies
+(check-expect (add-name? S1) true)  ;Examples
 
+;(define (add-name? s) false)  ;Stub
 
-
+; <Use template from Student>
+(define (add-name? s)
+    (and (<= (student-grade s) 6)
+             (student-allergies? s)))    
+```
 
 
 
