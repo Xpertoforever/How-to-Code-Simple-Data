@@ -51,4 +51,10 @@ With DrRacket 8.0
 - Quiz / Flow Growing Up
 
 ## 4a: Self-Reference
-
+- List Mechanisms
+- List Data Definition
+- Function Operating on List
+- Revising the Recipes for Lists
+- Designing with Lists
+- Positions in List Templates
+- Recommended Problems
