@@ -1,8 +1,13 @@
 # SELF-REFERENCE
 
 ## List Mechanisms  
-We will learn how to make a list; how to get the first, second or rest or any other element from the list  
-An arbitrary amount of information; required arbitrary-sized data
+**We will learn how to make a list; how to get the first, second or rest or any other element from the list  
+An arbitrary amount of information; required arbitrary-sized data**  
+
+A Well formed Self-Reference:  
+- at least one base case  
+- at least one self reference case  
+
 ```racket
 (require 2htdp/image)
 
@@ -107,4 +112,29 @@ the list includes "UBC".
              true
              (contains-ubc? (rest los)))]))   
 
+```
+## Revising the Recipes for Lists  
+The selft reference template rule puts natural recursion in the template that corresponds to the  
+self-reference in the type comment
+```racket
+;; ListOfString is one of:
+;; - empty
+;; - (cons String ListOfString)
+;; interp. a list of strings
+(define LOS1 empty)
+(define LOS2 (cons "McGill" empty))
+(define LOS3 (cons "UBC" (cons "McGill" empty)))
+
+#;
+(define (fn-for-los los)
+  (cond [(empty? los) (...)]
+        [else
+         (... (first los)                  ; String
+              (fn-for-los (rest los )))])) ; ListOfString
+
+;; Template rules used:
+;; -one of: 2 cases
+;; - atomic distinct: empty
+;; - compound: (cons String ListOfString)  
+;; - self-reference: (res los) is ListOfString
 ```
