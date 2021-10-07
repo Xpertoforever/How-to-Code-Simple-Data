@@ -200,3 +200,5 @@ in the owlery.
         [else
          (+ 1 (count (rest lon)))]))
 ```
+## Positions in List Templates  
+Video explanation, see image attached 6.1 and 6.2
