@@ -554,11 +554,9 @@ that allows you to click on a spot on the screen to create a flower,
 which then grows over time. If you click again the first flower  
 is replaced by a new one at the new position.  
 
-===================================================================  
-CREATE A PROGRAM THAT ALLOWS YOU TO CLICK ON A SPOT ON THE SCREEN  
+**CREATE A PROGRAM THAT ALLOWS YOU TO CLICK ON A SPOT ON THE SCREEN  
 TO CREATE A FLOWER, WHICH THEN GROWS OVER TIME. IF YOU CLICK AGAIN  
-THE FIRST FLOWER IS REPLACED BY A NEW ONE AT THE NEW POSITION.  
-===================================================================  
+THE FIRST FLOWER IS REPLACED BY A NEW ONE AT THE NEW POSITION.  **
 
 You should do all your design work in DrRacket.  
 Following the step-by-step recipe in DrRacket will help you be sure  
