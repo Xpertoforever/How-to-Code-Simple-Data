@@ -1,7 +1,8 @@
 # SELF-REFERENCE
 
 ## List Mechanisms  
-We will learn how to make a list; how to get the first, second or rest or any other element from the list
+We will learn how to make a list; how to get the first, second or rest or any other element from the list  
+An arbitrary amount of information; required arbitrary-sized data
 ```racket
 (require 2htdp/image)
 
