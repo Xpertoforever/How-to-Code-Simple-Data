@@ -58,3 +58,6 @@ With DrRacket 8.0
 - Designing with Lists
 - Positions in List Templates
 - Recommended Problems
+
+## 4b: Reference
+- The Reference Rule Part 1
