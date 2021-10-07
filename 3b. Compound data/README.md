@@ -542,7 +542,159 @@ but we would like you to use compound data.
         [else wb]))   
 ;; --------------------------------------------------
 ```
+## QUIZ - FLOWER GROWING UP - MOUSE RESTART    
+PROBLEM:  
+Design a World Program with Compound Data. You can be as creative  
+as you like, but keep it simple. Above all, follow the recipes!  
+You must also stay within the scope of the first part of the course.  
+Do not use language features we have not seen in the videos.   
+
+If you need inspiration, you can choose to create a program  
+that allows you to click on a spot on the screen to create a flower, 
+which then grows over time. If you click again the first flower  
+is replaced by a new one at the new position.  
+
+===================================================================  
+CREATE A PROGRAM THAT ALLOWS YOU TO CLICK ON A SPOT ON THE SCREEN  
+TO CREATE A FLOWER, WHICH THEN GROWS OVER TIME. IF YOU CLICK AGAIN  
+THE FIRST FLOWER IS REPLACED BY A NEW ONE AT THE NEW POSITION.  
+===================================================================  
+
+You should do all your design work in DrRacket.  
+Following the step-by-step recipe in DrRacket will help you be sure  
+that you have a quality solution.  
+
+**You will find the image and the racket file in the attached files**
+```racket
+(require 2htdp/image)
+(require 2htdp/universe)
+
+;; A flower appears in the screen from small to big rotating in its center
+
+;; ==================================================
+;; Domain analysis (use a piece of paper!)
+
+;; Constant:
+;;  - width
+;;  - height
+;;  - mts: Backgroud
+;;  - flower image
+
+;; Changing:
+;; - X coordinate of the flower
+;; - Y coordinate of the flower
+;; - Size of the flower
+
+;; Maybe I can add this for the next version
+;; - Degree rotation of the flower
+
+;; Identify big-bang options
+;; - on-tick
+;; - to-draw
+;; - on-mouse
+;; ==================================================
+;; Constants:
+(define WIDTH 400)
+(define HEIGHT 600)
+(define MTS (empty-scene WIDTH HEIGHT))
+(define IMG-FLOWER .)
+(define SCALE-FACTOR 0.2)
+    
+;; ==================================================
+;; Data Definitions:
+; ______________________________
+;|Data definititon recipe HtDD  |
+;|1. Structure definition       |
+;|2. Type comment               |
+;|3. Interpretation             |
+;|4. Examples                   | 
+;|5. A template                 |
+;|6. Templates Rules used       |
+;|______________________________|
+
+(define-struct flower (x y size))
+;; Flower is (make-flower (Number Number Number))
+;; interp. (make-flower x y size) is a flower in the x and y position
+;;         in the screeen with a size determined
+;;         X is the x coordinate in the screen
+;;         Y is the y coordinate in the screen
+;;         Size is how bing is the flower size
+
+(define F1 (make-flower 0 0 0))
+(define F2 (make-flower 5 20 3))
+(define F3 (make-flower (/ WIDTH 2) (/ HEIGHT 2) 20))
+
+#;
+(define (fn-for-flower f)
+  (... (flower-x f)        ;Number
+       (flower-y f)        ;Number
+       (flower-size f)))   ;Number
+
+;; Template rules used:
+;; Compound: 3 fields
+
+;; ==================================================
+;; Functions:
+;; --------------------------------------------------
+;; Big-Bang
+
+;; Flower -> Flower
+;; A flower starts to grow up, start the world with (main (make-flower 200 300 1))
+;; 
+(define (main f)
+  (big-bang f                          ; Flower
+            (on-tick   put-flower 0.08)     ; Flower ->  Flower
+            (to-draw   render-flower)  ; Flower -> Image
+            (on-mouse  handle-mouse))) ; Flower Integer Integer MouseEvent -> Flower
+
+; Big-bang more options not used:
+;            (stop-when ...)      ; WS -> Boolean
+;            (on-mouse  ...)      ; WS Integer Integer MouseEvent -> WS
+;            (on-key    ...)))    ; WS KeyEvent -> WS
+            
+;; --------------------------------------------------      
+; ______________________________
+;|- HtDF Recipe                 |
+;|1. Signature                  |
+;|2. Purpose                    |
+;|3. Stub                       |
+;|4. Examples                   | 
+;|5. Code Body                  |
+;|6. Test                       |
+;|______________________________|          
+;; --------------------------------------------------
+;; Function 1
+;; Flower -> Flower
+;; produce the current flower in the position selected
+(check-expect (put-flower (make-flower 0 0 2)) (make-flower 0 0 (+ 2 SCALE-FACTOR)))
+(check-expect (put-flower (make-flower 20 50 10)) (make-flower 20 50 (+ 10 SCALE-FACTOR)))
+
+; (define (put-flower f) IMG-FLOWER)  ;Stub
+
+; <Use template from flower>  
+(define (put-flower f)
+  (make-flower (flower-x f) (flower-y f) (+ (flower-size f) SCALE-FACTOR))) 
+;; --------------------------------------------------
+;; Function 2
+;; Flower -> Image
+;; render the flower in the correct position and size
+(check-expect (render-flower (make-flower 20 20 2)) 
+              (place-image (scale 2 IMG-FLOWER) 20 20 MTS))
 
 
+;(define (render-flower f) MTS)  ;stub
 
+; <Use template from flower>  
+(define (render-flower f)
+  (place-image (scale (flower-size f) IMG-FLOWER) (flower-x f) (flower-y f) MTS))
 
+;; --------------------------------------------------
+;; Function 3
+;; Flower Integer Integer MouseEvent -> Flower
+;; When the mouse is clicked in the screen the flower now appear in this position 
+
+(define (handle-mouse f x y me)
+  (cond [(mouse=? me "button-down") (make-flower x y SCALE-FACTOR)]
+        [else f]))
+;; -------------------------------------------------- 
+```
