@@ -53,3 +53,83 @@ in the list. Call it double-all.
          (cons (* (first lon) 2)
                (double-all (rest lon)))]))
 ```
+## PROBLEM 2: BOOLEAN LIST   
+PROBLEM A:  
+Design a data definition to represent a list of booleans. Call it ListOfBoolean.   
+```racket
+;; =================
+;; Data definitions:
+
+;; ListOfBoolean is one of:
+;; - empty
+;; - (cons Boolean ListOfBoolean))
+;; interp. a list of boolean (true or false)
+(define LOB1 empty)
+(define LOB2 (cons true empty))
+(define LOB3 (cons false (cons true empty)))
+#;
+(define (fn-for-lob lob)
+    (cond [(empty? lob) (...)]
+        [else
+         (... (first lob)
+              (fn-for-lob (rest lob)))]))
+
+;; Template rules used:
+;; - one of: 2 cases
+;; - atomic non-distinct: empty
+;; - compound: (cons Boolean ListOfBoolean))
+;; - self-reference: (rest lob) is ListOfBoolean 
+```
+PROBLEM B:  
+Design a function that consumes a list of boolean values and produces true   
+if every value in the list is true. If the list is empty, your function   
+should also produce true. Call it all-true?  
+```racket
+;; =================
+;; Functions:
+; ______________________________
+;|- HtDF Recipe                 |
+;|1. Signature                  |
+;|2. Purpose                    |
+;|3. Stub                       |
+;|4. Examples                   | 
+;|5. Code Body                  |
+;|6. Test                       |
+;|______________________________|
+
+;; ListOfBoolean -> Boolean
+;; produce true if all elements from a list is true or if the list is empty
+(check-expect (all-true empty) true)
+(check-expect (all-true (cons true empty)) (and true true)
+(check-expect (all-true (cons false empty)) false)
+(check-expect (all-true (cons true (cons false empty))) false)
+(check-expect (all-true (cons true (cons true empty))) true)
+
+;(define (all-true lob) true) ;Stub
+
+; <Use Template form ListOfBoolean>
+#;
+(define (all-true lob)
+    (cond [(empty? lob) true]
+        [else
+         (if (boolean=? (first lob) false)
+             false
+             (all-true (rest lob)))]))
+
+; <Use Template form ListOfBoolean>
+(define (all-true lob)
+    (cond [(empty? lob) true]
+        [else
+         (and (first lob) (all-true (rest lob)))]))
+```
+
+
+
+
+
+
+
+
+
+
+
