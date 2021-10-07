@@ -47,3 +47,7 @@ With DrRacket 8.0
 - Compound Data definition
 - Practice Problems / Compound Data  
 - HtDW with Compoun Data
+- Recommened Problems
+- Quiz / Flow Growing Up
+
+
