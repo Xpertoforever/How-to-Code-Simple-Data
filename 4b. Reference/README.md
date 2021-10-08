@@ -57,3 +57,36 @@ information in bar charts like this one:
          (... (fn-for-school (first los))
               (fn-forlos (rest los)))]))
 ```
+## The Reference Rule Part 2: 
+**Importance of the Good Examples**  
+```racket
+;; Functions
+
+;; ListOfSchool -> Image
+;; produce bar chart showing names and tuitions of consumed schools
+(check-expect (chart empty) (square 0 "solid" "white"))
+(check-expect (chart (cons (make-school "S1" 8000) empty))
+              (beside (overlay/align "center" "bottom" (rotate -90 (text "S1" FONT-SIZE FONT-COLOR))
+                                                       (rectangle BAR-WIDTH (* 8000 Y-SCALE)  "outline" "black"))
+                                                       (rectangle BAR-WIDTH (* 8000 Y-SCALE) "solid" BAR-COLOR )
+                      (square 0 "solid" "white")))
+ 
+(check-expect (chart (cons (make-school "S1" 8000) (cons (make-school "S2" 9000  empty))))
+              (beside/aling "bottom" (overlay/align "center" "bottom" (rotate -90 (text "S1" FONT-SIZE FONT-COLOR))
+                                                                      (rectangle BAR-WIDTH (* 8000 Y-SCALE)  "outline" "black")
+                                                                      (rectangle BAR-WIDTH (* 8000 Y-SCALE) "solid" BAR-COLOR ))
+                                     (overlay/align "center" "bottom" (rotate -90 (text "S2" FONT-SIZE FONT-COLOR))
+                                                                      (rectangle BAR-WIDTH (* 9000 Y-SCALE)  "outline" "black")
+                                                                      (rectangle BAR-WIDTH (* 9000 Y-SCALE) "solid" BAR-COLOR ))
+                                     (square 0 "solid" "white")))
+
+;(define (chart los) (square 0 "solid" "white")) ; Stub
+
+; <Use template from ListOfSchool>
+
+(define (fn-for-los los)
+  (cond [(empty? los) (...)] 
+        [else
+         (... (fn-for-school (first los))
+              (fn-forlos (rest los)))]))
+```
