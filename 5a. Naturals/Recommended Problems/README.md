@@ -44,3 +44,32 @@
   (text (number->string n) TEXT-HEIGHT TEXT-COLOR))
 ;; ✚ Ff--------------------------------------------
  ```
+## PROBLEM 2 Odd from Natural
+ PROBLEM:  
+  Design a function called odd-from-n that consumes a natural number n, and produces a list of all   
+ the odd numbers from n down to 1.   
+ 
+ Note that there is a primitive function, odd?, that produces true if a natural number is odd.   
+ ```racket
+ ;; Natural -> ListOfNatural
+;; produce the odd list from the natural providen
+(check-expect (odd-from-n 0) empty)
+(check-expect (odd-from-n 3) (cons 3 (cons 1 empty)))
+(check-expect (odd-from-n 6) (cons 5 (cons 3 (cons 1 empty))))
+
+;(define (odd-from-n n) lon) ;Stub
+
+(define (odd-from-n n)
+  (cond [(zero? n) empty]
+        [else
+         (if (odd? n)
+             (cons n (odd-from-n (sub1 n)))
+             (odd-from-n (sub1 n)))]))
+
+;;; Natural -> ListOfNatural
+;;; produce the list of a odd natural numbers
+;(check 
+;
+;(define (odd n) lob) ; Stub
+
+ ```
