@@ -66,5 +66,8 @@ With DrRacket 8.0
 - Recommended Problems
 
 ## 5a: Natural
+- Natural Numbers
+- A parlor trick
+- Recommended Problems
 
-
+## 5b: Helpers
