@@ -61,3 +61,10 @@ With DrRacket 8.0
 
 ## 4b: Reference
 - The Reference Rule Part 1
+- The Reference Rule Part 2
+- The Reference Rule Part 3
+- Recommended Problems
+
+## 5a: Natural
+
+
