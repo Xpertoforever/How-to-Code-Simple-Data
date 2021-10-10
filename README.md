@@ -71,3 +71,9 @@ With DrRacket 8.0
 - Recommended Problems
 
 ## 5b: Helpers
+- Function Composition
+- Laying out a List of Images
+- Operating on a List
+- Domain Knowledge shift
+- The last Helper
+- Recommended Problems
