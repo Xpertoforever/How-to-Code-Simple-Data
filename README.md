@@ -77,3 +77,7 @@ With DrRacket 8.0
 - Domain Knowledge shift
 - The last Helper
 - Recommended Problems
+- Design Quiz
+
+## 6: Binary Search Trees
+- List Abbreviations
