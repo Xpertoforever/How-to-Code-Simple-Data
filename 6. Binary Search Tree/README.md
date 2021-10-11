@@ -21,3 +21,13 @@
 (list "a" "b" "c")
 ```
 
+## List of Account
+```racket
+; (define (lookup accs n) "")
+(define (lookup accs n)
+  (cond [(empty? accs) false]
+        [else
+         (if (= n (account-num  (first accs))) ;Natural 
+             (account-name (first accs)) ;String
+             (lookup (rest accs) n))]))
+```
