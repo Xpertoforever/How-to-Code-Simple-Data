@@ -31,3 +31,5 @@
              (account-name (first accs)) ;String
              (lookup (rest accs) n))]))
 ```
+## Binary Search Trees  
+Images attached  
