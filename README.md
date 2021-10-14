@@ -85,6 +85,8 @@ With DrRacket 8.0
 - Binary Search Trees
 - A Data Definition for Binary Search Trees
 - Lookup in BST
+- Rendering BSTs
+- Recommended Problems
 
 
 
