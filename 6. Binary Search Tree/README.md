@@ -104,3 +104,55 @@ is written in a special way as shown below.
                 (lookup-key (node-r t) k)])]))
        
 ```
+## Rendering BSTs
+**PROBLEM:**  
+Design a function that consumes a bst and produces a SIMPLE   
+rendering of that bst. Emphasis on SIMPLE. You might want to  
+skip the lines for example.  
+```racket
+;; BST -> Image
+;; produce a SIMPLE rendering of the tree
+
+(check-expect (render-bst false) MTTREE)
+(check-expect (render-bst BST1) (above (text (string-append "1" KEY-VAL-SEPARATOR "abc")
+                                             TEXT-SIZE
+                                             TEXT-COLOR) 
+                                 VSPACE
+                                 (beside (render-bst false)
+                                         HSPACE
+                                         (render-bst false)))) 
+                                        
+(check-expect (render-bst BST4) (above (text (string-append "4" KEY-VAL-SEPARATOR "dcj")
+                                             TEXT-SIZE
+                                             TEXT-COLOR)
+                                 VSPACE
+                                 (beside (render-bst false) 
+                                         HSPACE
+                                         (render-bst (make-node 7 "ruf" false false)))))
+
+(check-expect (render-bst BST3) (above (text (string-append "3" KEY-VAL-SEPARATOR "ilk")
+                                             TEXT-SIZE
+                                             TEXT-COLOR) 
+                                 VSPACE
+                                 (beside (render-bst BST1)
+                                         HSPACE
+                                         (render-bst BST4))))  
+
+;(define (render-bst t) (square 0 "solid" "white"))
+(define (render-bst t)
+  (cond [(false? t) MTTREE]
+        [else
+         (above (text (string-append (number->string (node-key t)) KEY-VAL-SEPARATOR (node-val t))
+                      TEXT-SIZE
+                      TEXT-COLOR)
+                 VSPACE
+                 (beside (render-bst (node-l t))
+                         HSPACE
+                         (render-bst (node-r t))))]))
+```
+
+
+
+
+
+
