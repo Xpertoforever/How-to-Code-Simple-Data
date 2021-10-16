@@ -88,6 +88,6 @@ With DrRacket 8.0
 - Rendering BSTs
 - Recommended Problems
 
-
-
+## Final Project: 
+- Space Invaders
 
